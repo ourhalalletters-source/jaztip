@@ -1,0 +1,11 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply font-body bg-cream text-plum}
+h1,h2,h3{@apply font-head}
+@layer components{
+  .pop{@apply border-[3px] border-plum rounded-3xl shadow-[5px_5px_0_#532A72]}
+  .btn{@apply inline-flex items-center justify-center gap-2 font-head font-bold px-5 py-3 rounded-full border-[3px] border-plum shadow-[3px_3px_0_#532A72] transition active:translate-x-[2px] active:translate-y-[2px] active:shadow-none}
+  .inp{@apply w-full border-[3px] border-plum rounded-xl px-3 py-2 bg-white}
+}
+@keyframes wob{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+.wob{animation:wob 3s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.wob{animation:none}}
